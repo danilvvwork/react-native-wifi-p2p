@@ -1,27 +1,26 @@
 {
-  "_from": "react-native-wifi-p2p",
+  "_from": "git+https://github.com/danilvvwork/react-native-wifi-p2p.git",
   "_id": "react-native-wifi-p2p@0.6.3",
   "_inBundle": false,
-  "_integrity": "sha512-6nbHhc7MRjZzUlyrmbYxlnWkBijD70PRSmYPJM8PsTOGL3aTiQeqp4edmE0+58SbTDbC9Rd4gTvy8s69ZNRPFA==",
+  "_integrity": "",
   "_location": "/react-native-wifi-p2p",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "react-native-wifi-p2p",
+    "type": "git",
+    "raw": "react-native-wifi-p2p@git+https://github.com/danilvvwork/react-native-wifi-p2p.git",
     "name": "react-native-wifi-p2p",
     "escapedName": "react-native-wifi-p2p",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "rawSpec": "git+https://github.com/danilvvwork/react-native-wifi-p2p.git",
+    "saveSpec": "git+https://github.com/danilvvwork/react-native-wifi-p2p.git",
+    "fetchSpec": "https://github.com/danilvvwork/react-native-wifi-p2p.git",
+    "gitCommittish": null
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/react-native-wifi-p2p/-/react-native-wifi-p2p-0.6.3.tgz",
+  "_resolved": "git+https://github.com/danilvvwork/react-native-wifi-p2p.git#69c5b250a21bbd4033c1519077edb3ff9bb685d5",
   "_shasum": "1e63b5edc8d259647172636132c176207b8e830f",
-  "_spec": "react-native-wifi-p2p",
+  "_spec": "react-native-wifi-p2p@git+https://github.com/danilvvwork/react-native-wifi-p2p.git",
   "_where": "/Volumes/Work/ReactNative/wifitransfer/MainProject",
   "author": {
     "name": "Kiryl Ziusko"

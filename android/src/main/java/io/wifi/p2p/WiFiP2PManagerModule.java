@@ -219,8 +219,7 @@ public class WiFiP2PManagerModule extends ReactContextBaseJavaModule implements 
         // User has picked an image. Transfer it to group owner i.e peer using
         // FileTransferService.
 
-        File file = new File(Environment.getExternalStorageDirectory()
-                .getAbsolutePath(), filePath);
+        File file = new File(filePath);
         System.out.println("Sending: " + file.getAbsolutePath());
         System.out.println("Sending File exists: " + file.exists());
         System.out.println("Sending File Readable: " + file.canRead());
