@@ -51,7 +51,7 @@ public class FileServerAsyncTask extends AsyncTask<Void, Void, String> {
             System.out.println("server: copying files " + f.toString());
             InputStream inputstream = client.getInputStream();
             copyFile(inputstream, new FileOutputStream(f));
-//            serverSocket.close();
+            serverSocket.close();
             AlertDialog.Builder builder;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 builder = new AlertDialog.Builder(context, android.R.style.Theme_Material_Dialog_Alert);
