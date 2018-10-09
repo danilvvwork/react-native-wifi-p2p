@@ -52,22 +52,6 @@ public class FileServerAsyncTask extends AsyncTask<Void, Void, String> {
             InputStream inputstream = client.getInputStream();
             copyFile(inputstream, new FileOutputStream(f));
             serverSocket.close();
-            AlertDialog.Builder builder;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                builder = new AlertDialog.Builder(context, android.R.style.Theme_Material_Dialog_Alert);
-            } else {
-                builder = new AlertDialog.Builder(context);
-            }
-            builder.setTitle("Download Success")
-                    .setMessage("File downloaded to " + downloadPath + ".")
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // continue with delete
-                        }
-                    })
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
-
             return f.getAbsolutePath();
         } catch (IOException e) {
             System.err.println(e.getMessage());
@@ -86,6 +70,21 @@ public class FileServerAsyncTask extends AsyncTask<Void, Void, String> {
             intent.setAction(android.content.Intent.ACTION_VIEW);
             intent.setDataAndType(Uri.parse("file://" + result), "image/*");
             context.startActivity(intent);
+            AlertDialog.Builder builder;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                builder = new AlertDialog.Builder(context, android.R.style.Theme_Material_Dialog_Alert);
+            } else {
+                builder = new AlertDialog.Builder(context);
+            }
+            builder.setTitle("Download Success")
+                    .setMessage("File downloaded to " + result + ".")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // continue with delete
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .show();
         }
     }
     /*
